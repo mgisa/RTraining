@@ -1,0 +1,63 @@
+---
+title: ""
+subtitle: "Senior Data Scientist"
+image: images/Gisa_headshot.jpg 
+toc: false 
+links:
+  - label: LinkedIn
+    icon: fab fa-linkedin-in
+    url: "https://www.linkedin.com/in/gisa-murera-7009aa155/"
+  - label: Twitter
+    url: "https://twitter.com/gisa_murera"
+  - label: GitHub
+    url: "https://github.com/mgisa"
+  - label: Rpubs
+    url: "https://rpubs.com/mgisa"
+output:
+  postcards::trestles:
+    image-shape: round
+    image-width: 30em
+site: distill::distill_website
+
+format:
+  html:
+    link-external-newwindow: true
+---
+
+
+
+<!-- HTML and CSS for the callout box -->
+<style>
+.callout-note {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  border-left-color: #007bff;
+}
+.callout-note p {
+  margin: 0;
+}
+</style>
+
+<div style="text-align: center;">
+  <h1>Murera Gisa</h1>
+  <h2>Senior Data Scientist</h2>
+</div>
+
+<hr>
+
+I am currently a Senior Data Scientist at the National Bank of Rwanda, [BNR](https:://www.bnr.rw){target="_blank"} and have four years experience now at the bank. Prior to moving into Economics and Financial sector, I spent nearly decade working for different organizations. I extensively use and love `R` to the core due to its superpower and heavenly momentum in the field of Data Science and computing (*Almighty R!!!*).
+
+<!-- Callout box content -->
+<div class="callout-note">
+  <p style="text-align: center;"><strong>Contact:</strong></p>
+  <p style="text-align: center;"><span style="color: #a04000;"><em>elgisamur@gmail.com</em></span></p>
+  <p style="text-align: center;"><span style="color: #a04000;"><em>Tel: +250788266517</em></span></p>
+</div>
+
+
+
+

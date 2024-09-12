@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: "Source Serif Pro";
+  background-color: #E9D2C0;
+  color: #060100;
+  font-size: 14px;
+}
+
+h1, h2 {
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  line-height: 2rem;
+  color: #753918;
+  font-weight: 30;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  line-height: 2rem;
+  color: #753;
+  font-weight: 20;
+}
+
+d-appendix {
+  color: #060100;
+  background-color: #E9D2C0;
+  border-top: none !important;
+}
+
+/* Custom CSS for Distill site */
+
+/* Increase the size of the logo */
+.distill-logo img {
+  width: 60px; /* Adjust the width as needed */
+  height: 40px; /* Maintain aspect ratio */
+}
+
+/* Additional custom styles can go here */
+
+
+
+.distill-site-header { 
+  padding: 8px 0px;
+  margin-top: 0px;
+  background-color: #808000;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar #distill-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+  color: #E9D2C0;
+}
+
+div.distill-about-jolla main {
+  border-top: solid 3px #808000;
+  border-bottom: solid 3px #808000;
+  border-radius: 0;
+  padding-top: 20px;
+}
+
+div.distill-about-jolla {
+  margin-top: 5px;
+}
+
+d-byline {
+    padding: 0 0;
+}
+
+d-article ul {
+  list-style: none; /* Remove default bullets */
+}
+
+d-article ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #bb0000; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+d-article ul > li > p {
+  display: inline; /* to have content show up next to bullet */
+  line-height: 1.6em;
+}
+
+d-article ul > li { /* to add back in space between bullet items that I took away by making p display inline */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.d-contents ul li::before {
+  content: " "; /* Remove toc bullets */
+}
+/* Footer container */
+.footer {
+  width: 100% !important; /* Set the width to 60% of the container. Adjust as needed */
+  padding: 0px 0px !important; /* Adjust the padding to control the space around the footer content */
+  font-size: 15px; /* Adjust the font size */
+  text-align: center; /* Center the content */
+  margin: 0 auto !important; /* Center the footer by setting left and right margins to auto */
+  background-color: #DAF7A6; /* Background color for the footer */
+  border: none; /* Remove any borders if present */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
+/* Ensure background covers full width */
+.distill-site-footer {
+  width: 100% !important; /* Set the width to 60% of the container */
+  padding: 0px 0px 0px !important; /* Adjust the padding to control the space around the footer content */
+  font-size: 15px; /* Adjust the font size */
+  text-align: center; /* Center the content */
+  margin: 0 auto !important; /* Center the footer by setting left and right margins to auto */
+  background-color: #DAF7A6; /* Background color for the footer */
+  border: none; /* Remove any borders if present */
+  border-radius: 30px; /* Optional: Add rounded corners */
+}
+
+/* Links inside the footer */
+.footer a {
+  color: #a04000; /* Footer link color */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 10px; /* Add some space between links */
+}
+
+.footer a:hover {
+  color: #007bff; /* Change link color on hover */
+}
+
+/* Footer text */
+.footer p {
+  margin: 0; /* Remove default margin from paragraphs */
+  line-height: 1.5; /* Adjust the line height */
+  color: #060100;
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0px; /* Reduce padding on smaller screens */
+    font-size: 12px; /* Reduce font size on smaller screens */
+  }
+
+  .footer a {
+    margin: 0 5px; /* Reduce space between links on smaller screens */
+  }
+}

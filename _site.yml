@@ -1,0 +1,49 @@
+name: "Streamline Godly R"
+title: "Streamline R"
+output_dir: "docs"
+include: 
+  - "slides/"
+  - "trial/"
+#include: ["slides/"]
+#include: ["trial/"]
+exclude: ["data/"]
+favicon: icon-33.png
+
+navbar:
+  logo:
+    image: images/icon-33.png
+    href: mgisa.github.io/myblog
+  search: true
+  right:
+    - href: index.html
+      text: Home
+    - href: about.html
+      text: Welcome
+    - href: trainer.html
+      text: Trainer
+    - href: contents_trial.html
+      text: Training Materials
+    - icon: fab fa-github
+      href: https://github.com/mgisa
+    - icon: fab fa-twitter
+      href: https://twitter.com/gisa_murera
+    - icon: fas fa-user
+      href: mgisa.github.io/myblog
+
+output:
+  distill::distill_article:
+    toc: false
+    css: styles.css
+    
+format:
+  html:
+    theme: [cosmo, styles.css]
+    toc: false
+    link-external-newwindow: true
+    metadata:
+      pagetitle: "Murera Gisa"
+
+editor: source
+
+execute:
+  freeze: auto

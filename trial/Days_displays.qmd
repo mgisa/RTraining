@@ -1,0 +1,55 @@
+---
+title: "Foundations of R Programming for Data Science"
+author: "Trainer: Murera Gisa <br>Senior Data Scientist<br>September, 2024"
+format: 
+  revealjs:
+    footer: "[@mgisa](https://mgisa.github.io/myblog)&nbsp;&nbsp;&nbsp;"
+    theme: [moon, custom.scss]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+#include-after-body: "footer.html"
+---
+
+# Welcome to you all!!!
+<br/>
+
+::: {.incremental}
+- Hi :wave:
+- Training Materials to be shared soon :arrow_down:
+- Count down :clock9:
+- Prepare for a big training show :heavy_check_mark:
+- Leaning plan for better future :clipboard:
+:::
+
+---
+
+# Current Status
+
+::: {.absolute top="0" left="100%"}
+::: {.sectionhead}
+1 [2 3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+> We are working on the other slides and will be posited soon. Meanwhile, enjoy the below ressources.
+
+---
+
+# Resources
+
+[R for Data Science](https://r4ds.had.co.nz/): The ultimate guide notes.
+
+[R for Excel users](https://rstudio-conf-2020.github.io/r-for-excel/): A very useful workshop for the biginners.
+
+[Read Book](https://stat545.com/): An online book on reproducible data analysis in R
+
+The [RStudio Education](https://education.rstudio.com/) site for more learning posters.
+
+The [Learn `tidyverse`](https://www.tidyverse.org/learn/) ecosystem site
+---
+
+# SEE YOU SOON!!! :heavy_check_mark:

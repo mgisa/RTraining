@@ -1,0 +1,60 @@
+---
+title: "Who is Trainer?"
+description: |
+ ✍️ Meet your trainer, an experienced data scientist with a passion for teaching and a deep expertise in R programming.  
+ 
+ 📋 With a strong background in data analysis and a proven track record of guiding learners from beginners to proficient R users, your trainer is dedicated to making complex concepts accessible and engaging. 
+ 
+ 👍 Get ready to learn from a professional who understands the challenges of mastering data science and is here to support you every step of the way.
+ 
+include-after-body: "footer.html"
+theme:
+  dark: darkly
+  light: flatly
+---
+
+
+<!-- HTML and CSS for the callout box -->
+<style>
+.callout-note {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  border-left-color: #007bff;
+}
+.callout-note p {
+  margin: 0;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+> Personal Information
+
+I am really cool guy who is always have a positive mind and eagerly motivated to learn.
+
+🎓 I hold a bachelor of Sciences (Physics) with Education and two masters degrees (MSc. in Mathematical Sciences, option of Data Science and MSc. in Economics)
+
+👩‍🎤 I am a experienced data scientist with extensive experience in leveraging data to drive impactful decisions. My strong education background and journey in data science has equipped me with a robust skill set in diverse programming languages including `R`, `Python`, `EVIEWS`, `STATA`, machine learning, and robust data analysis.
+
+🕛️ Over the years, I've had the opportunity to work on diverse projects, from health, economic monitoring to climate change and air quality assessment, always with a focus on using data to solve real-world problems. I am passionate about continuous learning and sharing my knowledge, which drives me to mentor aspiring data professionals and contribute to the data science community.
+
+> Talks and Workshops
+
+I've given several talks and workshops, many focused on Air Quality Control and Climate Change, Remote Sensing, Machine Learning and Agriculture and much more. I taught the Air Quality Data Analytics, Statistical Graphics & Visualization course through the Climate Change and Air Quality Monitoring Project at the Rwanda Environment Management Authority, [REMA](www.rpubs.com/mgisa){target="_blank"}. The course focused on data visualization using R and `openair`. Last summer, I taught the course of R package development for data management through the Cenfri Rwanda consultancy contract and give seminars at the University of Rwanda in field of Machine Learning applications.
+
+> Grant and Project Leading
+
+The UNESCO offered us the research grant to implement the schooling project title **Pollution Mitigation Strategies and Digital Air Quality Monitoring at Secondary School and TVET in Rwanda: Pilot study of Kigali City**. We have delivered the developed application used to monitor the air quality status through the color code indices as recommended by US-EPA. Here you can access the [SANO](https://mgisa.shinyapps.io/schoolAirNow/) application.
+
+<!-- Callout box content -->
+
+<div class="callout-note">
+  <p><strong>Note:</strong> You can find more works and tutorials on my personal [website](mgisa.github.io/myblog){target="_blank"}, and from my [blog](www.rpubs.com/mgisa){target="_blank"}. </p>
+</div>

@@ -1,0 +1,64 @@
+---
+title: "Welcome Note"
+description: |
+ 👋 Warm Welcome!!. 
+ 
+ 📋  Welcome to our **Foundations of R Programming for Data Science** training!
+ We hope you gonna enjoy our vibrant training environment and kindly request your active collaboration to make our session memorable!
+ 
+include-after-body: "footer.html"
+theme:
+  dark: darkly
+  light: flatly
+---
+
+
+<!-- HTML and CSS for the callout box -->
+<style>
+.callout-note {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  border-left-color: #007bff;
+}
+.callout-note p {
+  margin: 0;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+💻️ This introductory course is designed to equip you with essential skills in `R` programming, a powerful and versatile tool for data analysis.
+
+🆕 Whether you're new to programming or looking to enhance your data science capabilities, this training will guide you through the fundamentals of R, enabling you to confidently manipulate, analyze, and visualize data.
+
+👏 Join us as we explore the basics of R programming, laying the groundwork for your journey into the world of data science.
+
+
+<div class="tenor-gif-embed" data-postid="25058970" data-share-method="host" data-aspect-ratio="1.49533" data-width="100%"><a href="https://tenor.com/view/youre-welcome-gif-25058970">Youre Welcome GIF</a>from <a href="https://tenor.com/search/youre-gifs">Youre GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+
+<!-- Callout box content -->
+
+<div class="callout-note">
+  <p style="text-align: center;"><strong>Training Ground Rules</strong></p>
+  
+  <p> <strong> 1. Engage Actively:</strong> Participants are expected to actively engage in discussions, activities, and exercises. This includes asking questions, sharing experiences, and contributing ideas to enhance collective learning.</p>
+  
+ <p> <strong> 2. Respect All Contributions:</strong>  Every participant’s input is valuable. Listen attentively, respect differing opinions, and provide constructive feedback to create a supportive learning environment.
+ </p> 
+ 
+  <p> <strong> 3. Stay Focused and Present:</strong>  Minimize distractions and stay focused on the training. This means we kindly request to be present both physically and mentally to fully absorb the material and contribute to the group.
+   </p> 
+  
+  <p> <strong> 4. Collaborate Openly: </strong>  Emphasize teamwork by encouraging collaboration and knowledge sharing. Kindly work together to solve problems, complete tasks, and support each other's learning journey.
+   </p> 
+   
+  <p> <strong> 5. Practice Mutual Accountability: </strong> Hold yourself and others accountable for completing assignments, participating in group work, and adhering to the training schedule. Mutual accountability helps ensure that everyone benefits from the training..
+   </p> 
+</div>

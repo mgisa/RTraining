@@ -1,0 +1,126 @@
+---
+title: "Foundations of R Programming for Data Science"
+#subtitle: "Data Science"
+#author:
+#   - name: Meghan Hall
+#   - url: https://meghan.rbind.io
+#   - affiliation: Carnegie Mellon University
+#   - date: "`r Sys.Date()`"
+description: |
+   This is a comprehensive training program designed to equip participants with the essential skills and knowledge required to effectively use the R programming language for data science applications from different domains.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+This course covers fundamental concepts, practical techniques, and hands-on exercises to ensure that attendees gain a solid foundation in R programming and its applications in data analysis, visualization, and statistical modeling.
+
+## Intention and Motivation
+
+The primary intention of this training is to introduce participants to the R programming language and provide them with the necessary tools to perform data science tasks. By the end of the training, participants will be able to write R code, manipulate data, create visualizations, and apply statistical techniques to real-world datasets.
+
+
+## Objectives
+
+- **Introduction to R**: Familiarize participants with the R programming environment, including installation, basic syntax, and key features.
+- **Data Manipulation**: Teach participants how to import, clean, and manipulate data using R's powerful data manipulation packages such as dplyr and tidyr.
+- **Data Visualization**: Enable participants to create informative and visually appealing data visualizations using ggplot2 and other visualization libraries.
+- **Statistical Analysis**: Provide a foundational understanding of statistical concepts and how to apply them using R, including descriptive statistics, hypothesis testing, and regression analysis.
+- **Reproducible Research**: Introduce the concept of reproducible research using R Markdown, enabling participants to create dynamic and shareable reports.
+- **Practical Applications**: Engage participants in hands-on exercises and projects to apply their learning to real-world scenarios and datasets.
+
+
+## Lectures
+
+Lecture slides are available below in html format, and the .Rmd files are linked from GitHub.
+
+| Days | Topic                                          | html | Rmd  |
+|---------|------------------------------------------------|------|------|
+| Day0  | Welcome and Training Overview| [`r icons::fontawesome$solid$laptop`]((https://mgisa.github.io/RTraining/trial/Days_displays#1) | [`r icons::fontawesome$brands$github`](https://github.com/mgisa/RTraining/blob/main/slides/Days_displays.qmd) |
+| Day2  | the grammar of graphics  | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec2#1) | [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec2.Rmd)|
+| Day3  | bar graphs | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec3#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec3.Rmd)|
+| Day4  | visualizing distributions | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec4#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec4.Rmd)|
+| Day5  | line graphs & working with time | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec5#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec5.Rmd)|
+| 6  | scatter plots & relational data | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec6#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec6.Rmd)|
+| 7  | grab bag (pie charts, heat maps, maps) | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec7#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec7.Rmd)|
+| 8  | taking plots to the next level | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec8#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec8.Rmd)|
+| 9  | colors, fonts, annotations, themes | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec9#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec9.Rmd)|
+| 10  | extensions to `ggplot2` | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec10#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec10.Rmd)|
+| 11  | midterm review | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec11#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec11.Rmd)|
+| 12  | model output visualizations from `tidymodels` & user-defined functions | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec12#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec12.Rmd)|
+| 13  | text analysis with `tidytext` and tables with `kableExtra` | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec13#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec13.Rmd)|
+| 13  | tables with `gt` and `gtsummary` | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec13_addl) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec13_addl.Rmd)|
+| 14  | presentations with `xaringan` | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec14#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec14.Rmd)|
+| 15  | animation with `gganimate`, interactivity with `plotly`, and iteration with `purrr` | [`r icons::fontawesome$solid$laptop`](https://cmu-36315.netlify.app/slides/36-315_summer2021_lec15#1) |  [`r icons::fontawesome$brands$github`](https://github.com/meghall06/CMU-36-315-site/blob/main/slides/36-315_Summer2021_Lec15.Rmd)|
+
+## Labs
+
+Lab slides are available below in html format, and the .Rmd files are available at the GitHub repo linked in the nav bar above.
+
+- [Lab 1](slides/36-315_Summer2021_Lab1_lec.html)
+- [Lab 2](slides/36-315_Summer2021_Lab2_lec.html)
+- [Lab 3](slides/36-315_Summer2021_Lab3_lec.html)
+- [Lab 4](slides/36-315_Summer2021_Lab4_lec.html)
+- [Lab 5](slides/36-315_Summer2021_Lab5_lec.html)
+- [Lab 6](slides/36-315_Summer2021_Lab6_lec.html)
+- [Lab 8](slides/36-315_Summer2021_Lab8_lec.html)
+- [Lab 9](trial/NEAIR.html)
+
+## Resources
+
+### Data Visualization
+
++ Fundamentals of Data Visualization: <https://clauswilke.com/dataviz/index.html>
+
++ Data Visualization: A Practical Introduction: <https://socviz.co/index.html#preface>
+
+### The tidyverse
+
++ Best resource for overall analysis in R using the tidyverse: <https://r4ds.had.co.nz/>
+
+### `ggplot2`
+
++ `ggplot2` book: <https://ggplot2-book.org/>
+
++ The `ggplot2` cheatsheet: <https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf>
+
++ Details of various charts made in R: <https://www.r-graph-gallery.com/index.html>
+
++ Creating custom themes: <https://themockup.blog/posts/2020-12-26-creating-and-using-custom-ggplot2-themes/>
+
++ R Graphics cookbook: <https://r-graphics.org/>
+
++ A guide to various scales: <https://ggplot2tor.com/scales>
+
+### R Markdown
+
++ The definitive guide to R Markdown: <https://bookdown.org/yihui/rmarkdown/>
+
++ R Markdown reference guide: <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
+
++ R Markdown cheat sheet: <https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>
+
+
+## Acknowledgments {.appendix}
+
+This website is made with the [distill package](https://rstudio.github.io/distill/). Many thanks to [Alison Hill](https://alison.rbind.io/) and [Desirée De Leon](https://desiree.rbind.io/) and their [Teaching in Production](https://rstudio-education.github.io/teaching-in-production/) website, which provided the inspiration for this site. Also thanks to Tom Mock for his enormously helpful [introduction to distill](https://themockup.blog/posts/2020-08-01-building-a-blog-with-distill/).
+
+```{r, include=FALSE, results='asis'}
+library(metathis)
+meta() %>%
+  meta_social(
+    title = "CMU 36-315",
+    description = "Course website for Statistical Graphics & Visualization, by Meghan Hall",
+    url = "https://cmu-36315.netlify.app/",
+    image = "https://raw.githubusercontent.com/meghall06/CMU-36-315-site/main/icon-192.png",
+    image_alt = "CMU 36-315",
+    og_type = "website",
+    og_author = "Meghan Hall",
+    twitter_card_type = "summary",
+    twitter_creator = "@meghanmhall"
+  )
+```

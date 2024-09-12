@@ -1,0 +1,62 @@
+---
+title: "R for Data Science"
+#subtitle: "Data Science"
+#author:
+#   - name: Meghan Hall
+#   - url: https://meghan.rbind.io
+#   - affiliation: Carnegie Mellon University
+#   - date: "`r Sys.Date()`"
+description: |
+   This is a comprehensive training program designed to equip participants with the essential skills and knowledge required to effectively use the R programming language for data science applications from different domains.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Preface and Contribution
+
+This compiled learning  is for anyone who is interested in learning `R` and `Data Science`.It is designed for people with zero background in programming and from any education background.
+
+To improve the learning material, we would like to ask for your contribution.If you find any typos or grammar issues, please feel free to directly contact us. Also, if you have more general questions or feedback about any materials in this compiled courses , we greatly appreciate if you can write to us at `elgisamur@gmail.com`.
+
+## Acknowledgement 
+
+With your permission, we will be happy to add your name in the Acknowledgment section to show our gratitude if you made any contribution to make this material informative.
+
+## Building Environment
+
+> The R session information when compiling this material is shown below.
+
+```{r}
+sessionInfo(package = NULL)
+
+```
+
+## Overview
+
+This course covers fundamental concepts, practical techniques, and hands-on exercises to ensure that attendees gain a solid foundation in R programming and its applications in data analysis, visualization, and statistical modeling.
+
+## Intention and Motivation
+
+The primary intention of this training is to introduce participants to the R programming language and provide them with the necessary tools to perform data science tasks. By the end of the training, participants will be able to write R code, manipulate data, create visualizations, and apply statistical techniques to real-world datasets.
+
+
+## Objectives
+
+- **Introduction to R**: Familiarize participants with the R programming environment, including installation, basic syntax, and key features.
+- **Data Manipulation**: Teach participants how to import, clean, and manipulate data using R's powerful data manipulation packages such as dplyr and tidyr.
+- **Data Visualization**: Enable participants to create informative and visually appealing data visualizations using ggplot2 and other visualization libraries.
+- **Statistical Analysis**: Provide a foundation understanding of statistical concepts and how to apply them using R, including descriptive statistics, hypothesis testing, and regression analysis.
+- **Reproducible Research**: Introduce the concept of reproducible research using R Markdown, enabling participants to create dynamic and shareable reports.
+- **Practical Applications**: Engage participants in hands-on exercises and projects to apply their learning to real-world scenarios and datasets.
+
+## Lectures
+
+Lecture slides are available below in html format, and the .Rmd files are linked from GitHub.
+
+| Days | Topic                                          | Html | Rmd  |
+|---------|------------------------------------------------|------|------|
+| Day 1  | Welcome and Training Overview| [`r icons::fontawesome$solid$laptop`](https://mgisa.github.io/RTraining/trial/Day1_Lec1#1) | [`r icons::fontawesome$brands$github`](https://github.com/mgisa/RTraining/tree/master/trial/Day1_Lec1.Rmd) |
+| Day 1  | Introduction and Environment Set Up| [`r icons::fontawesome$solid$laptop`](https://mgisa.github.io/RTraining/trial/RDay1#1) | [`r icons::fontawesome$brands$github`](https://github.com/mgisa/RTraining/tree/master/trial/RDay1.qmd) |
