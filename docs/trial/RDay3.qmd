@@ -81,7 +81,8 @@ print(v_sum)
 ```{r}
 # Create a 3x3 matrix and perform matrix multiplication
 m <- matrix(1:9, nrow = 3, byrow = TRUE)
-m_product <- m %*% m
+n <- matrix(3:14, nrow = 3, byrow = TRUE)
+m_product <- m %*% n
 print(m_product)
 
 ```
@@ -120,9 +121,75 @@ det(mat)
 ::: {.incremental}
 
 - `if`, `else`, and `else if` statements
-- Logical operators (`>`, `<`, `==`, `!=`, `&&`, `||`)
+- Logical operators (`>`, `<`, `==`,`%in%`, `!=`, `&&`, `||`)
 - Vectorized comparison
 :::
+
+---
+
+## CONT'D
+
+```{r, eval=FALSE}
+if (expression) {
+   #statement to execute if condition is true
+}
+```
+
+- If the expression is `TRUE`, the statement gets executed.
+- But if the expression is `FALSE`, nothing happens. 
+
+_NOTE:_ The expression can be a logical/numerical vector, but only the first element is taken into consideration. In the case of numeric vector, zero is taken as FALSE, rest as TRUE.
+
+---
+
+## if else if statement
+
+```{r, eval= FALSE}
+if(outer-condition is true) {
+       execute this statement
+} else if(inner-condition1 is true) {
+       execute this statement
+} .
+  .
+  .
+else {
+       execute this statement
+}
+```
+
+- There can be more than one else if statement in the ladder to check for a lot of conditions at the same time.
+- In this case, it works like a switch. 
+- The following code snippets indicate the illustration of the if-else-if ladder.
+---
+
+## Examples and Exercises
+
+```{r, eval=FALSE}
+# creating values 
+a <- 'A'
+  
+# checking if-else if ladder 
+if(a %in% c('E','D')){ 
+    print("Block if") 
+  }else if(a %in% c('A','D')) 
+  { 
+    print("Block else-if") 
+  }else
+  { 
+    print("Block else") 
+  } 
+
+# creating values 
+var1 <- 6 
+var2 <- 5 
+  
+# checking if-else if ladder 
+if(var1 > 10 || var2 < 5){ 
+  print("condition1") 
+}else if(var1<7 && var2==5){ 
+  print("condition2") 
+}
+```
 
 ---
 
@@ -131,13 +198,45 @@ det(mat)
 - Write a function that uses `if` statements to compare two numbers.
 - Use logical operators to subset a vector based on conditions.
 
-```{r}
+```{r, eval=FALSE}
 # Check if a number is positive or negative
 x <- -5
 if (x > 0) {
   print("Positive")
 } else {
   print("Negative")
+}
+
+# Assigning value to variable x
+x <- 12
+ 
+# Condition
+if (x > 20)
+{
+ print("12 is less than 20")  # Statement
+}
+```
+
+---
+
+## Exercises 2
+
+```{r}
+
+# creating values 
+var1 <- 6 
+var2 <- 5 
+var3 <- -4 
+  
+# checking if-else if ladder 
+if(var1 > 10 || var2 < 5){ 
+  print("condition1") 
+}else if(var1<7 && var2==5 && var3>0){ 
+  print("condition2") 
+}else if(var1<7 && var2==5 && var3<0){ 
+  print("condition3") 
+}else{ 
+  print("condition4") 
 }
 
 ```
@@ -156,7 +255,20 @@ if (x > 0) {
 
 ---
 
-## Hands-on Exercises
+## for loop statement
+
+> It is a type of control statement that enables one to easily construct an R loop that has to run statements or a set of statements multiple times.
+
+```{r, eval=FALSE}
+for (value in sequence)
+{
+  statement
+}
+```
+
+---
+
+## Examples and Exercises
 
 - Loop through a vector and print each element.
 - Loop through a matrix and calculate the sum of each row.
@@ -171,7 +283,41 @@ for (i in vec) {
 ```
 ---
 
-## CONT'D
+## Examples 
+
+```{r eval=FALSE}
+
+# R program to demonstrate the use of for loop
+ 
+# using for loop
+for (val in 1: 5)
+{
+    # statement
+    print(val)
+}
+
+# R program to illustrate application of for loop
+# assigning strings to the vector
+week <- c('Sunday',
+           'Monday',
+           'Tuesday',
+           'Wednesday',
+           'Thursday',
+           'Friday',
+           'Saturday')
+ 
+# using for loop to iterate
+# over each string in the vector
+for (day in week)
+{
+ 
+    # displaying each string in the vector
+    print(day)
+}
+```
+---
+
+## While Loop in R
 
 > `while` and `repeat` Loops
 
@@ -181,7 +327,18 @@ for (i in vec) {
 - When to use `while` loops
 - Breaking out of loops (`break`, `next`)
 :::
+---
 
+##  CONT'D
+
+- It is a type of control statement that will run a statement or a set of statements repeatedly unless the given condition becomes false.
+
+```{r, eval=FALSE}
+while ( condition ) 
+{
+  statement
+}
+```
 ---
 
 ## Hands-on Exercises
@@ -189,7 +346,7 @@ for (i in vec) {
 - Write a `while` loop to calculate the sum of numbers up to a limit.
 - Use `next` to skip specific iterations of a loop.
 
-```{r}
+```{r, eval=FALSE}
 # Calculate the sum of numbers from 1 to 10 using a while loop
 sum <- 0
 i <- 1
@@ -199,6 +356,36 @@ while (i <= 10) {
 }
 print(sum)
 
+
+# R program to demonstrate the use of while loop
+ 
+val = 1
+ 
+# using while loop
+while (val <= 5)
+{
+    # statements
+    print(val)
+    val = val + 1
+}
+```
+
+---
+
+## Repeat Loop in R
+
+- It is a simple loop that will run the same statement or a group of statements repeatedly until the stop condition has been encountered.
+
+```{r eval=FALSE}
+repeat 
+{ 
+   statement
+ 
+   if( condition ) 
+   {
+      break
+   }
+}
 ```
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Streamlining with R"
-author: "Murera Gisa <br>Senior Data Scientist<br>August, 2024"
+author: "Murera Gisa <br>Senior Data Scientist<br>September, 2024"
 format: 
   revealjs:
     footer: "[My Blog](https://mgisa.github.io/myblog)&nbsp;&nbsp;&nbsp;"
@@ -13,229 +13,217 @@ execute:
   echo: true
 ---
 
-## Housekeeping
+## Outline
 
 <br/>
 
 ::: {.incremental}
-- Intro :wave:
-- Workshop materials :arrow_down:
+- Packages and package dependencies Management:wave:
+- Data Importation :arrow_down:
 - Break :clock9:
-- By the end of today :heavy_check_mark:
-- Today's plan :clipboard:
+- Introduction to `tidyverse` :heavy_check_mark:
+- Data Exploration :clipboard:
+- Modelling Analysis
 :::
 
 ---
 
-## Today's plan
+## Packages in R
+
+::: {.incremental}
+- The package is an appropriate way to organize the work and share it with others. 
+- Packages in R Programming language are a set of R functions, compiled code, and sample data.
+- These are stored under a directory called `library` within the `R` environment. 
+- By default, R installs a group of packages during installation.
+- Other packages that are already installed need to be loaded explicitly.
+:::
+---
+
+## What is R Repositories?
 
 <br/>
 
 ::: {.incremental}
-1. What is R? How can it ease the burden of repeated reporting?
-2. Basic functions for manipulating data
-3. Using R effectively
-4. More data manipulation
-5. Visualizing data
-6. A peek at advanced topics
+- A repository is a place where packages are located and stored so you can install R packages from it. 
+- Organizations and Developers have a local repository, typically they are online and accessible to everyone. 
 :::
+---
 
-# What is R?
+## R Packages Repository
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
+::: {.incremental}
+- **CRAN:** Comprehensive R Archive Network(CRAN) is the official repository, it is a network of FTP and web servers maintained by the R community around the world. 
+- The R community coordinates it, and for a package to be published in CRAN, the Package needs to pass several tests to ensure that the package is following CRAN policies.
+- **Bioconductor:** Bioconductor is a topic-specific repository, intended for open source software for bioinformatics.
+- **Github:** Github is the most popular repository for open-source projects. 
 :::
 
 ---
 
-## What is R?
+## Install R Packages
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
+1. **Installing R Packages From CRAN:** For installing R Package from CRAN we need the name of the package and use the following command:
 
-<br>
-<br>
-<br>
-<br>
+```{r, eval=FALSE}
+install.packages("package name")
+```
 
-::: {style="text-align: center"}
-R is an open-source ([**free**]{style="color:#cc0000"}!) scripting language for working with data
-:::
+- Installing Package from CRAN is the most common and easiest way as we just have to use only one command. 
 
----
+**Example**
 
-## The benefits of R
-
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
-
-<br>
-<br>
-
-My personal Excel nightmare
-
-<br>
-
-. . .
-
-The magic of R is that it's [**reproducible**]{style="color:#cc0000"} (by someone else *or* by yourself in six months)
-
-<br>
-
-. . .
-
-Keeps data separate from code (data preparation steps)
-
+```{r, eval=FALSE}
+install.packages("rio", dependencies = TRUE)
+```
 
 ---
 
-## Getting R
+## CONT'D
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
+2. **Installing BiocManager Packages:** For installing Bioconductor packages, you should use the BiocManager package to install and manage Bioconductor packages.
 
-<br/>
-<br/>
-<br/>
+```{r, eval=FALSE}
+install.packages("BiocManager")
+BiocManager::install("edgeR")
+```
 
-You need the R [language](https://cloud.r-project.org/)
-<br/>
-<br/>
-
-. . .
-
-And also the [software](https://www.rstudio.com/products/rstudio/download/#download)
+- This will install the `edgeR` package and its dependencies from the Bioconductor repository.
 
 ---
 
-## Navigating RStudio
+## CONT'D
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
+3. **Install an R packages from GitHub**
 
-::: {.absolute top="10%" left="0" width="1031" height="529"}
-::: {style="text-align: center"}
-![](RStudio1.png)
-:::
-:::
+- First, you need to install `devtools` or `remotes` packages by running the following code:
 
-::: {.absolute top="66%" left="55%"}
-::: {style="color: #cc0000"}
-project files are here
-:::
-:::
+```{r, eval=FALSE}
+# Install devtools
+install.packages("devtools")
+# Install remotes
+install.packages("remotes")
+```
 
-. . .
+- Once either `devtools` or `remotes` is installed, you can use the `install_github()` function to install an R package from GitHub. The syntax is:
 
-::: {.absolute top="28%" left="70%"}
-::: {style="color: #cc0000"}
-imported data shows up here
-:::
-:::
+```{r, eval=FALSE}
+devtools::install_github("github_username/github_repo")# devtools usage
+remotes::install_github("github_username/github_repo")# remotes 
+```
 
-. . .
-
-::: {.absolute top="50%" left="10%"}
-::: {style="color: #cc0000"}
-code *can* go here
-:::
-:::
+- This will directly download and install the tidyverse package from GitHub.
 
 ---
 
-## Navigating RStudio
+## Update, Remove and Check Installed Packages in R
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
+- To check what packages are installed on your computer, type this command: 
 
-::: {.absolute top="10%" left="0" width="1031" height="529"}
-::: {style="text-align: center"}
-![](RStudio2.png)
-:::
-:::
+```{r, eval=FALSE}
 
-::: {.absolute top="66%" left="55%"}
-::: {style="color: #cc0000"}
-project files are here
-:::
-:::
+.libPaths()#get library location in your system
+installed.packages()
+```
 
-::: {.absolute top="28%" left="70%"}
-::: {style="color: #cc0000"}
-imported data shows up here
-:::
-:::
+- To update all the packages, type this command: 
 
-::: {.absolute top="35%" left="25%"}
-::: {style="color: #cc0000"}
-code can also<br>go here
-:::
-:::
+```{r, eval=FALSE}
+update.packages()
+```
+
+- To update a specific package, type this command: 
+```{r, eval=FALSE}
+install.packages("PACKAGE NAME")
+```
 
 ---
 
-## Using R
+## Loading Packages in R
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
+- When a R package is installed, we are ready to use its functionalities.
+- If we just need a sporadic use of a few functions or data inside a package we can access them with the following notation.
 
-::: columns
-::: {.column width="50%"}
-<br>
-<br>
-You use R via *packages*
-:::
-::: {.fragment}
+```{r, eval=FALSE}
+ # Load a package using the library function
+library(dplyr)
+# Load a package using the require function
+require(dplyr)
+```
+
+- Both methods accomplish the same thing, so it’s mostly a matter of personal preference.
+---
+
+## Data Analysis
+
 <br/>
-...which contain *functions*
-:::
-::: {.fragment}
-<br>
-...which are just *verbs*
-:::
-:::
 
-::: {.column width="50%"}
-::: {.fragment}
-![](tidyverse.png){.absolute top="70" left="530" height="574" width="499"}
+![Figure from Wickham and Grolemund (2017)](images/analysisworkflow.png)
+---
+
+## Importing data in R
+
+::: {.incremental}
+- The package responsible for loading data in the `tidyverse` is called `readr`, so we start by loading the whole tidyverse.
+- Note, that in general, we could also load just the `readr` package with `library(readr)`, but we need the rest of the `tidyverse` later on anyways.
+- Since each package came with data, we might use it for analysis. For example `gapminder` data came with `readr`.
 :::
+---
+
+## gapminder data
+
+::: {.incremental}
+- The gapminder dataset (Bryan 2017) is an excerpt from the gapminder project and contains the life expectancy at birth for 142 countries at 5 year intervals between 1952 and 2007.
+- It also contains the population and the Gross Domestic Product (GDP) per Inhabitant.
+- We will make some analysis and built a visualization on it later on.
 :::
+---
+
+## A Project-based Workflow
+
+::: {.incremental}
+- The main folder where R starts is called the working directory. - To find out, what our current working directory is, we execute the function `getwd()` for get working directory.
+- RStudio projects set this working directory automatically, which is very convenient. 
+- It makes it easier for us to share code and projects, by simply copying the whole folder.
+- Our file paths need to be relative, not absolute. An absolute file path starts at the root of our operating system, 
+:::
+---
+
+## Wranglind data with `dplyr`
+
+::: {.incremental}
+- There a are a number of ways in which we can manipulate data
+-  This is sometimes referred to as `data wrangling` and within the tidyverse, this is a job for the `dplyr` package.
+- `dplyr` provides functions for various operations on our data.
+- Theses functions are sometimes also called __dplyr verbs__.
+- All of them take a `tibble` or `data.frame` as input and always return a `tibble`. 
+- But enough talk, let’s go wrangling!
+:::
+---
+
+## CONT'D
+
+> The dplyr verb are:
+
+- `select`, `filter`, `mutate`, `group_by`, `summarize`,`arrange`,and others
+
+```{r, eval=FALSE}
+select(gapminder, year:pop)
+select(gapminder, starts_with("co"))
+select(gapminder, where(is.numeric))
+select(gapminder, where(is.character))
+select(gapminder, c(1, 3, 4))
+```
+
 
 ---
 
 ## Today's data
 
-::: {.absolute top="0" left="100%"}
-::: {.sectionhead}
-1 [2 3 4 5 6]{style="opacity:0.25"}
-:::
-:::
-
 ```{r}
 #| echo: false
 library(tidyverse)
-faculty <- read_csv("faculty.csv")
-courses <- read_csv("courses.csv")
+faculty <- read_csv("data/faculty.csv")
+courses <- read_csv("data/courses.csv")
 opts <- options(knitr.kable.NA = "")
 ```
 

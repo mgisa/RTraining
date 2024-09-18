@@ -1,0 +1,23 @@
+---
+title: "T-Test output"
+format: revealjs
+editor: visual
+---
+
+## Let’s break down the results of the one-sample t-test:
+
+1.  **t = 0**: This is the t-statistic, which measures how far the sample mean is from the hypothesized mean (69.8) in terms of standard errors. A t-value of 0 indicates that the sample mean is exactly equal to the hypothesized mean.
+
+2.  **df = 4**: This is the degrees of freedom, which is calculated as the sample size minus one. In this case, the sample size is 5 (since df = 4).
+
+3.  **p-value = 1**: The p-value indicates the probability of obtaining a test statistic at least as extreme as the one observed, assuming the null hypothesis is true. A p-value of 1 means there is no evidence to reject the null hypothesis. In other words, the sample mean is not significantly different from the hypothesized mean of 69.8.
+
+4.  **Alternative hypothesis: true mean is not equal to 69.8**: This is the alternative hypothesis being tested, which states that the true mean of the population is different from 69.8.
+
+5.  **95 percent confidence interval: 65.46305 to 74.13695**: This interval provides a range of values within which we are 95% confident that the true population mean lies. Since 69.8 is within this interval, it further supports that there is no significant difference between the sample mean and the hypothesized mean.
+
+6.  **Sample estimates: mean of x = 69.8**: This is the sample mean, which is 69.8 in this case.
+
+### Interpretation:
+
+The results indicate that there is no significant difference between the sample mean and the hypothesized mean of 69.8. The p-value of 1 suggests that the sample data is perfectly consistent with the null hypothesis. Additionally, the 95% confidence interval includes the hypothesized mean, providing further evidence that the true mean is likely to be around 69.8.
